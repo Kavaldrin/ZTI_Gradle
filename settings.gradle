@@ -1,0 +1,8 @@
+rootProject.name = 'ZTI_Gradle_Prezentacja'
+include 'Przyklad_2'
+include 'Przyklad_3'
+include 'Przyklad_Podstawowy_1'
+include 'Przyklad_Podstawowy_2'
+include 'Przyklad_Podstawowy_3'
+include 'Przyklad_Podstawowy_4'
+

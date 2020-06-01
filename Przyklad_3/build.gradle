@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.6'
+    testImplementation 'junit:junit:4.12'
+}
+
+mainClassName = 'Example_3'
+
+
+class MyPlugin implements Plugin<Project>{
+    void apply(Project project){
+        project.task('taskFromPlugin'){
+            doLast{
+                println "This is my own plugin!"
+            }
+        }
+    }
+}
+
+task showPropertyValue{
+    doLast{
+        println "$myProperty"
+    }
+}
+
+apply plugin: MyPlugin

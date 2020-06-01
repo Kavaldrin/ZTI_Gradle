@@ -1,0 +1,21 @@
+plugins {
+    id 'war'
+    id 'org.gretty' version '3.0.3'
+}
+
+version '1.0'
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    //providedCompile dependencies to tell the compiler to include those dependencies in the compile classpath, but to not make Gradle include them in the packaged .war artifact
+    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+    providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:3.3.3'
+}
